@@ -1,4 +1,4 @@
-Tempo médio
+Cold tests mean time
 
 | Pattern 	| Java 7 (ms) | Java 8 (ms) |
 | ------- 	| --------- | ----------- |
