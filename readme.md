@@ -1,4 +1,5 @@
 Tempo médio
+
 | Pattern 	| Java 7 (ms) | Java 8 (ms) |
 | ------- 	| --------- | ----------- |
 | Command	| 	6 		| 	80		  |
