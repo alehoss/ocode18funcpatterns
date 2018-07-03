@@ -4,6 +4,7 @@ public class Client {
 
 	
 	public static void main(String[] args) {
+		long start = System.currentTimeMillis();
 		System.out.println("The functional version of the command pattern");
 		Runnable[] cmdList = new Runnable[4];
 		Account accounts[] = new Account[2];
@@ -17,7 +18,8 @@ public class Client {
 		cmdList[3] = AccountFunctionFactory.createGetCashFunction(accounts[0], 50);
 		AccountFunctionFactory.executeAll(cmdList);
 		Account.showAll(accounts);
-		
+		long time = System.currentTimeMillis() - start;
+		System.out.println("Command java8: " + time + "ms");
 	}
 	
 

@@ -3,6 +3,7 @@ package oo_patterns.observer.java7;
 public class Client {
 
 	public static void main(String[] args) {
+		long start = System.currentTimeMillis();
 		Stock stockApple = new Stock("AAPL",143.51);
 		Stock stockAmazon = new Stock("AMZN",954.99);
 		Stock stockExxon = new Stock("XON",82.03);
@@ -16,6 +17,8 @@ public class Client {
 		stockAmazon.setPrice(955);
 		stockExxon.setPrice(78);
 		stockApple.setPrice(151);
+		long time = System.currentTimeMillis() - start;
+		System.out.println("Observer java7: " + time + "ms");
 	}
 
 }

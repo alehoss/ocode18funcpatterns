@@ -10,7 +10,8 @@ import java.util.List;
 public class Client {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader reader = new BufferedReader(new FileReader("mobydick.txt"));
+		long start = System.currentTimeMillis();
+		BufferedReader reader = new BufferedReader(new FileReader("/home/alehoss/dev/ocode/mobydick.txt"));
 		List<String> allLines = new ArrayList<>();
 		String line = reader.readLine();
 		while (line!=null) {
@@ -20,8 +21,9 @@ public class Client {
 		Text text = new Text(allLines);
 		text.forEachParagraph(paragraph-> {
 			System.out.println("paragraph = " + paragraph.getContent());
-		}); 
-
+		});
+		long time = System.currentTimeMillis() - start;
+		System.out.println("ParagraphIterator java8: " + time + "ms");
 	}
 
 }

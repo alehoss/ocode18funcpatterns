@@ -49,10 +49,13 @@ public class ParagraphIterator implements TextIterator {
 	}
 
 	public static void main(String[] args) throws IOException {
+		long start = System.currentTimeMillis();
 		System.out.println(new ParagraphIterator(null).isEmptyLine(""));
 		System.out.println(new ParagraphIterator(null).isEmptyLine(null));
 		System.out.println(new ParagraphIterator(null).isEmptyLine("   "));
 		System.out.println(new ParagraphIterator(null).isEmptyLine(" Aas sdf  "));
+		long time = System.currentTimeMillis() - start;
+		System.out.println("ParagraphIterator java7: " + time + "ms");
 
 	}
 	

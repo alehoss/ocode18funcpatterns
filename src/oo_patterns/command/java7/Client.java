@@ -3,6 +3,8 @@ package oo_patterns.command.java7;
 public class Client {
 
 	public static void main(String[] args) {
+		long start = System.currentTimeMillis();
+
 		AccountCommandExecutor exec = new AccountCommandExecutor();
 		System.out.println("before");
 		exec.showAll();
@@ -14,7 +16,8 @@ public class Client {
 		exec.executeAll();
 		
 		exec.showAll();
-
+		long time = System.currentTimeMillis() - start;
+		System.out.println("Command java7: " + time + "ms");
 	}
 
 }
